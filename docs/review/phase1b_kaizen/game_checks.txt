@@ -1,0 +1,6 @@
+COMBAT TESTS: 84/84 passed
+ENERGY_TESTS: 27/27 checks passed
+UI_TESTS: 71 checks, 0 failures
+GAME TESTS: 81/81 passed
+ANIMATION TESTS: 51/51 passed
+All Godot regression suites passed.

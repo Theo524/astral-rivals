@@ -1,0 +1,203 @@
+{
+  "source": "/tmp/astral-phase1b/human_base_meshes_bundle.blend",
+  "blender_version": "4.3.2",
+  "scope": "Source datablocks before modifiers; no asset mutation or quality certification",
+  "mesh_filter": [
+    "GEO-body_male_stylized",
+    "GEO-body_male_stylized.eye.L",
+    "GEO-body_male_stylized.eye.R"
+  ],
+  "meshes": [
+    {
+      "object": "GEO-body_male_stylized",
+      "vertices": 12502,
+      "triangles": 25000,
+      "faces_by_side_count": {
+        "4": 12500
+      },
+      "connected_components": 1,
+      "largest_components": [
+        12502
+      ],
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "shape_keys": [],
+      "materials": [],
+      "vertex_influence_histogram": {
+        "0": 12502
+      },
+      "unweighted_vertices": 12502,
+      "underweighted_vertices": 0,
+      "weighted_vertices_per_group": {},
+      "modifiers": [],
+      "asset_metadata": null
+    },
+    {
+      "object": "GEO-body_male_stylized.eye.L",
+      "vertices": 802,
+      "triangles": 1600,
+      "faces_by_side_count": {
+        "4": 768,
+        "3": 64
+      },
+      "connected_components": 1,
+      "largest_components": [
+        802
+      ],
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "shape_keys": [],
+      "materials": [],
+      "vertex_influence_histogram": {
+        "0": 802
+      },
+      "unweighted_vertices": 802,
+      "underweighted_vertices": 0,
+      "weighted_vertices_per_group": {},
+      "modifiers": [],
+      "asset_metadata": null
+    },
+    {
+      "object": "GEO-body_male_stylized.eye.R",
+      "vertices": 802,
+      "triangles": 1600,
+      "faces_by_side_count": {
+        "4": 768,
+        "3": 64
+      },
+      "connected_components": 1,
+      "largest_components": [
+        802
+      ],
+      "boundary_edges": 0,
+      "overused_edges": 0,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "shape_keys": [],
+      "materials": [],
+      "vertex_influence_histogram": {
+        "0": 802
+      },
+      "unweighted_vertices": 802,
+      "underweighted_vertices": 0,
+      "weighted_vertices_per_group": {},
+      "modifiers": [],
+      "asset_metadata": null
+    }
+  ],
+  "collection_assets": [
+    {
+      "name": "Body Female - Primitive (Stylized)",
+      "metadata": {
+        "author": "Paul Kotelevets",
+        "license": "CC0",
+        "description": "Simple objects with subdivision modifiers. Easy for design sculpting and remeshing"
+      }
+    },
+    {
+      "name": "Body Female - Primitve (Realistic)",
+      "metadata": {
+        "author": "Paul Kotelevets, Julien Kaspar",
+        "license": "CC0",
+        "description": "Simple objects with subdivision modifiers. Easy for design sculpting and remeshing"
+      }
+    },
+    {
+      "name": "Body Female - Realistic",
+      "metadata": {
+        "author": "Dan Ulrich",
+        "license": "CC0",
+        "description": "Realistic scan data model with multiresolution details"
+      }
+    },
+    {
+      "name": "Body Female - Stylized",
+      "metadata": {
+        "author": "Julien Kaspar",
+        "license": "CC0",
+        "description": "Generic stylized topology. Based on the open source character \"Rain\""
+      }
+    },
+    {
+      "name": "Body Male - Primitve (Realistic)",
+      "metadata": {
+        "author": "Paul Kotelevets, Julien Kaspar",
+        "license": "CC0",
+        "description": "Simple objects with subdivision modifiers. Easy for design sculpting and remeshing"
+      }
+    },
+    {
+      "name": "Body Male - Primitve (Stylized)",
+      "metadata": {
+        "author": "Paul Kotelevets",
+        "license": "CC0",
+        "description": "Simple objects with subdivision modifiers. Easy for design sculpting and remeshing"
+      }
+    },
+    {
+      "name": "Body Male - Realistic",
+      "metadata": {
+        "author": "Dan Ulrich",
+        "license": "CC0",
+        "description": "Realistic scan data model with multiresolution details"
+      }
+    },
+    {
+      "name": "Body Male - Stylized",
+      "metadata": {
+        "author": "Julien Kaspar",
+        "license": "CC0",
+        "description": "Generic stylized topology. Based on the open source character \"Snow\""
+      }
+    },
+    {
+      "name": "Head (Animation) - Realistic",
+      "metadata": {
+        "author": "Dan Ulrich",
+        "license": "CC0",
+        "description": "Realistic scan data model with multiresolution details. Topology optimized for rigging and animation"
+      }
+    },
+    {
+      "name": "Head (Sculpting) - Realistic",
+      "metadata": {
+        "author": "Dan Ulrich",
+        "license": "CC0",
+        "description": "Realistic scan data model with multiresolution details. Topology is optimized for multiresolution sculpting"
+      }
+    },
+    {
+      "name": "Head - Primitives",
+      "metadata": {
+        "author": "Paul Kotelevets, Julien Kaspar",
+        "license": "CC0",
+        "description": "Simple objects with subdivision modifiers. Easy for design sculpting and remeshing"
+      }
+    },
+    {
+      "name": "Head - Stylized",
+      "metadata": {
+        "author": "Julien Kaspar",
+        "license": "CC0",
+        "description": "Generic stylized head topology"
+      }
+    },
+    {
+      "name": "Skeleton - Realistic",
+      "metadata": {
+        "author": "Paul Kotelevets",
+        "license": "CC0",
+        "description": "Realistic model of a full human skeleton."
+      }
+    }
+  ],
+  "armatures": [],
+  "actions": []
+}

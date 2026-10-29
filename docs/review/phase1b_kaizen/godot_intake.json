@@ -1,0 +1,11 @@
+{
+	"animation_players": 0,
+	"engine": "4.6.3-stable (official)",
+	"import_error": 0,
+	"input": "/tmp/astral-phase1b/kaizen-base-intake.glb",
+	"meets_current_warrior_rig_preconditions": false,
+	"mesh_instances": 3,
+	"scope": "Import only; not graphical, deformation, combat or art-quality verification",
+	"skeletons": 0,
+	"skinned_meshes": 0
+}
