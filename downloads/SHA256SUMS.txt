@@ -1,1 +1,2 @@
 f2249d8d08dae982ed5c8b6fe2d4be38d032f58ef8940c113e9439cb8720e57b  AstralRivals-Android-0.2.0.apk
+449b2989f098eb19ea3f4ad18fdb463b8c4f7959d6d990e10ff0c22c0e18e7a6  AstralRivals-Windows-0.2.0.zip

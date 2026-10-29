@@ -37,5 +37,6 @@ export_credentials.cfg
 *.log
 .DS_Store
 
-# Keep this verified APK downloadable when GitHub Release attachments are unavailable.
+# Keep verified builds downloadable when GitHub Release attachments are unavailable.
 !downloads/AstralRivals-Android-0.2.0.apk
+!downloads/AstralRivals-Windows-0.2.0.zip
