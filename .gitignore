@@ -1,0 +1,38 @@
+# Godot/editor caches and machine-local output
+.godot/
+build/
+builds/
+export_templates/
+feature_profiles/
+text_editor_themes/
+
+# Generated native/download artifacts belong in GitHub Releases
+*.apk
+*.apk.idsig
+*.exe
+*.pck
+*.zip
+
+# Python and Blender backup files (keep authored .blend and .glb assets)
+__pycache__/
+*.pyc
+*.pyo
+*.blend1
+*.blend2
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+export_credentials.cfg
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store

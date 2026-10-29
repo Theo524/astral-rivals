@@ -1,0 +1,44 @@
+ASTRAL RIVALS — START HERE
+
+WINDOWS GAME
+1. Extract the Windows game ZIP using "Extract All".
+2. Open the extracted folder and double-click AstralRivals.exe.
+3. Keep any files delivered beside the EXE in the same folder.
+4. Choose Training, select a warrior and arena, then Enter the Arena.
+
+The exported Windows game does not require the Godot editor. The Godot source
+archive is a separate development package; opening project.godot is not needed
+to play the Windows game.
+
+FIRST FIGHT
+Wait for the countdown to finish. Training uses a passive dummy by default.
+Leave "Training Dummy Attacks" off while learning the controls.
+
+WASD / arrows   Move             Right mouse drag   Camera
+J              Light combo      K                  Heavy / launcher
+L              Energy blast     E                  Beam
+Hold Q         Guard            X                  Vanish dodge
+Shift + move   Dash             Space / Ctrl       Rise / descend
+Hold C         Charge energy    T                  Transform
+Tab            Lock enemy       Esc / P            Pause
+F11 / Alt+Enter                  Toggle fullscreen
+
+Start by moving, pressing J for combos, and holding C to refill energy.
+Heavy attacks launch your opponent; rise or dash to pursue in the air.
+Stronger attacks and transformations require energy.
+
+ANDROID
+Copy the provided AstralRivals.apk to a 64-bit Android 7 or newer phone, open it
+from Files and install it. It runs as a normal app without the Godot Android
+editor. This is a development-signed testing build. Device execution, stability
+and performance have not yet been verified in this workspace.
+See docs/PLAYER_GUIDE.md for installation and current build availability.
+
+SETTINGS AND SUPPORT
+Settings includes fullscreen/resolution, graphics and 30/60 FPS cap, volume,
+camera shake, training aggression, touch layouts, button size and sensitivity.
+Touch controls appear by default on mobile; enable them manually on desktop.
+
+These are improved work-in-progress characters/animations, not finished AAA
+production artwork. See README.md and docs/TEST_RESULTS.md for exact test scope,
+remaining limitations and platform status.

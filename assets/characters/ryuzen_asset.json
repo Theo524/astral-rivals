@@ -1,0 +1,144 @@
+{
+  "identity": "ryuzen",
+  "vertices": 5259,
+  "triangles": 9599,
+  "bones": 18,
+  "material_surfaces": 12,
+  "animations": {
+    "fps": 30,
+    "identity": "ryuzen",
+    "clips": {
+      "idle": {
+        "duration": 2.4,
+        "loop": true,
+        "frames": 73
+      },
+      "walk": {
+        "duration": 0.9666666666666667,
+        "loop": true,
+        "frames": 30
+      },
+      "run": {
+        "duration": 0.6333333333333333,
+        "loop": true,
+        "frames": 20
+      },
+      "hover": {
+        "duration": 2.0,
+        "loop": true,
+        "frames": 61
+      },
+      "fly": {
+        "duration": 0.8,
+        "loop": true,
+        "frames": 25
+      },
+      "dash_forward": {
+        "duration": 0.23333333333333334,
+        "loop": false,
+        "frames": 8
+      },
+      "dash_back": {
+        "duration": 0.23333333333333334,
+        "loop": false,
+        "frames": 8
+      },
+      "punch_1": {
+        "duration": 0.3333333333333333,
+        "loop": false,
+        "frames": 11,
+        "contact_normalized": 0.41
+      },
+      "punch_2": {
+        "duration": 0.3333333333333333,
+        "loop": false,
+        "frames": 11,
+        "contact_normalized": 0.41
+      },
+      "punch_3": {
+        "duration": 0.3333333333333333,
+        "loop": false,
+        "frames": 11,
+        "contact_normalized": 0.41
+      },
+      "kick": {
+        "duration": 0.5,
+        "loop": false,
+        "frames": 16,
+        "contact_normalized": 0.41
+      },
+      "heavy": {
+        "duration": 0.6333333333333333,
+        "loop": false,
+        "frames": 20,
+        "contact_normalized": 0.44
+      },
+      "blast": {
+        "duration": 0.36666666666666664,
+        "loop": false,
+        "frames": 12
+      },
+      "beam": {
+        "duration": 1.6,
+        "loop": false,
+        "frames": 49
+      },
+      "charge": {
+        "duration": 1.6,
+        "loop": true,
+        "frames": 49
+      },
+      "guard": {
+        "duration": 1.2,
+        "loop": true,
+        "frames": 37
+      },
+      "parry": {
+        "duration": 0.3,
+        "loop": false,
+        "frames": 10
+      },
+      "dodge": {
+        "duration": 0.23333333333333334,
+        "loop": false,
+        "frames": 8
+      },
+      "hurt": {
+        "duration": 0.3333333333333333,
+        "loop": false,
+        "frames": 11
+      },
+      "knockback": {
+        "duration": 0.6666666666666666,
+        "loop": false,
+        "frames": 21
+      },
+      "recovery": {
+        "duration": 0.5,
+        "loop": false,
+        "frames": 16
+      },
+      "transform": {
+        "duration": 1.3,
+        "loop": false,
+        "frames": 40
+      },
+      "ultimate": {
+        "duration": 2.6,
+        "loop": false,
+        "frames": 79
+      },
+      "victory": {
+        "duration": 2.0,
+        "loop": true,
+        "frames": 61
+      },
+      "defeat": {
+        "duration": 1.2,
+        "loop": false,
+        "frames": 37
+      }
+    }
+  },
+  "source": "Original mesh surfaces and rig authored by Astral Rivals; no third-party assets."
+}
