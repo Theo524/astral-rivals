@@ -2,9 +2,11 @@
 
 ## Downloads
 
-- **[Download Android APK](https://github.com/Theo524/astral-rivals/releases/download/v0.2.0/AstralRivals-Android-0.2.0.apk)** — 64-bit Android 7 or newer. Open the file to install this development-signed testing build.
-- **[Download Windows game](https://github.com/Theo524/astral-rivals/releases/download/v0.2.0/AstralRivals-Windows-0.2.0.zip)** — extract the ZIP and run `AstralRivals.exe`.
-- [Release notes and all downloads](https://github.com/Theo524/astral-rivals/releases/tag/v0.2.0)
+- **[Download Android APK](https://github.com/Theo524/astral-rivals/raw/refs/heads/main/downloads/AstralRivals-Android-0.2.0.apk)** — 64-bit Android 7 or newer. Open the file to install this development-signed testing build.
+- [Android download folder and checksum](https://github.com/Theo524/astral-rivals/tree/main/downloads)
+- [Release notes](https://github.com/Theo524/astral-rivals/releases/tag/v0.2.0)
+
+The APK is stored directly in the repository because the connected app could not upload release attachments. Windows testing builds were exported locally; a downloadable Windows attachment has not yet been published.
 
 The game builds do not require the Godot editor. Android device execution and physical Windows hardware compatibility remain unverified; see the testing notes below.
 
