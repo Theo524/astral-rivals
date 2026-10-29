@@ -1,5 +1,13 @@
 # Astral Rivals
 
+## Downloads
+
+- **[Download Android APK](https://github.com/Theo524/astral-rivals/releases/download/v0.2.0/AstralRivals-Android-0.2.0.apk)** — 64-bit Android 7 or newer. Open the file to install this development-signed testing build.
+- **[Download Windows game](https://github.com/Theo524/astral-rivals/releases/download/v0.2.0/AstralRivals-Windows-0.2.0.zip)** — extract the ZIP and run `AstralRivals.exe`.
+- [Release notes and all downloads](https://github.com/Theo524/astral-rivals/releases/tag/v0.2.0)
+
+The game builds do not require the Godot editor. Android device execution and physical Windows hardware compatibility remain unverified; see the testing notes below.
+
 Astral Rivals is a playable Godot 4.6.3 anime arena fighter with three original
 skinned warriors, authored skeletal animations, flight, melee and energy combat,
 and four single-player modes. A standalone **Windows executable has been
