@@ -5,6 +5,11 @@ Checks were executed on 2026-10-29 using
 project and working combat systems were upgraded in place. The results below
 separate simulation, actual graphical output, native export and device testing.
 
+The later **Kaizen-only Phase 1** source update reran all 314 assertions and a
+focused real-render menu/training check successfully. See [its exact changes,
+before/after screenshots and remaining art limitations](KAIZEN_PHASE1.md).
+Native 0.2.0 downloads below predate that source-only art update.
+
 ## Automated simulation and input
 
 Command:

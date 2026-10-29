@@ -96,7 +96,17 @@ func _update_camera(delta: float, immediate: bool) -> void:
 		var distance := clampf(5.0 + separation * 0.40 + minf(pursuit_speed*0.075,2.7), 5.6, 30.0)
 		var altitude := maxf(p.y, e.y)
 		var height := 1.8 + minf(separation * 0.10, 3.8) + absf(p.y - e.y) * 0.25 - _pitch*1.0
-		desired = p + away * distance + side * 1.35 + Vector3.UP * height
+		var shoulder_offset: float = 1.35
+		# A modest lower, wider shoulder view makes Kaizen's revised guard and
+		# clothing readable and separates the two silhouettes in close combat.
+		# Keep the established long-range/aerial framing and other roster intact.
+		var character_data = player.get("data")
+		if character_data is Dictionary and character_data.get("id","") == "kaizen":
+			var close_weight: float = 1.0-smoothstep(3.0,8.0,separation)
+			distance -= close_weight*0.6
+			height -= close_weight*0.65
+			shoulder_offset += close_weight*0.85
+		desired = p + away * distance + side * shoulder_offset + Vector3.UP * height
 		aim = p.lerp(e, 0.45)
 		if altitude > 5.0:
 			desired.y += 0.8

@@ -1,9 +1,9 @@
 {
   "identity": "kaizen",
-  "vertices": 5047,
-  "triangles": 9345,
+  "vertices": 7819,
+  "triangles": 13957,
   "bones": 18,
-  "material_surfaces": 12,
+  "material_surfaces": 14,
   "animations": {
     "fps": 30,
     "identity": "kaizen",
@@ -140,5 +140,6 @@
       }
     }
   },
-  "source": "Original mesh surfaces and rig authored by Astral Rivals; no third-party assets."
+  "source": "Original mesh surfaces and rig authored by Astral Rivals; no third-party assets.",
+  "art_revision": "phase1_kaizen_v1"
 }

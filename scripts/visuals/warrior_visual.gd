@@ -1,6 +1,7 @@
 extends Node3D
 ## Imported skinned GLB and authored bone clips; no body primitives or limb code.
 const TOON = preload("res://shaders/anime_toon.gdshader")
+const KAIZEN_TOON = preload("res://shaders/kaizen_toon.gdshader")
 const OUTLINE = preload("res://shaders/anime_outline.gdshader")
 const AURA = preload("res://shaders/energy_aura.gdshader")
 var identity: String = "kaizen"
@@ -78,15 +79,23 @@ func _prepare_materials() -> void:
 				tint = source.albedo_color
 				texture = source.albedo_texture
 			var material := ShaderMaterial.new()
-			material.shader = TOON
+			material.shader = KAIZEN_TOON if identity == "kaizen" else TOON
 			material.set_shader_parameter("base_color",tint)
 			material.set_shader_parameter("face_material",1.0 if ("skin" in label or "face" in label or "sclera" in label) else 0.0)
+			if identity == "kaizen":
+				var skin: bool = "skin" in label or "face" in label
+				material.set_shader_parameter("shadow_tint",Color("c38c88") if skin else Color("879bc9"))
+				material.set_shader_parameter("ink_detail",1.0 if "ink" in label else 0.0)
+				material.set_shader_parameter("eye_detail",1.0 if ("eye" in label or "iris" in label or "sclera" in label) else 0.0)
+				material.set_shader_parameter("hair_material",1.0 if "hair" in label else 0.0)
 			if texture != null:
 				material.set_shader_parameter("painted_texture",texture)
 				material.set_shader_parameter("use_texture",true)
 			if not ("ink" in label or "eye" in label or "iris" in label or "sclera" in label or "face" in label):
 				var ink := ShaderMaterial.new()
 				ink.shader = OUTLINE
+				if identity == "kaizen":
+					ink.set_shader_parameter("width",0.0018 if "hair" in label else 0.0028)
 				material.next_pass = ink
 			mesh.set_surface_override_material(surface,material)
 			materials.append({"material":material,"base":tint,"name":label})

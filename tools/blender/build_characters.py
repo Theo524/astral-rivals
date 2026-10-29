@@ -8,6 +8,7 @@ Run: blender --background --python tools/blender/build_characters.py
 import bpy, math, sys, json, os
 from pathlib import Path
 from mathutils import Vector
+from types import SimpleNamespace
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'assets'/'characters'
@@ -320,9 +321,22 @@ def render_review(scene,rig,identity):
 def build(identity):
  global PARTS,MAT
  scene=setup_scene();PARTS=[];p=PAL[identity]
+ if identity == 'kaizen':
+  # Dark blue-black retains the planes of the sculpted locks under the toon
+  # shader instead of collapsing to a featureless black cutout.
+  p=dict(p, hair=(.055,.075,.115,1))
  MAT={k:mat(k.title(),v) for k,v in p.items()}
  MAT.update({'ink':mat('Ink',(.006,.009,.017,1)),'white':mat('Sclera',(.93,.96,.98,1)),'inner':mat('Inner',(.015,.025,.055,1)),'skin_shadow':mat('FaceShadow',tuple(c*.64 for c in p['skin'][:3])+(1,)),'skin_light':mat('FaceHighlight',tuple(min(1,c*1.19) for c in p['skin'][:3])+(1,))})
- anatomy(identity);face(identity);hair(identity);armor(identity)
+ if identity == 'kaizen':
+  # Phase 1 is intentionally isolated: the other two authored assets and the
+  # shared rig/animation contract remain unchanged.
+  from kaizen_body import build as build_kaizen_body
+  from kaizen_head import build as build_kaizen_head
+  api=SimpleNamespace(MAT=MAT,mat=mat,mesh=mesh,tube=tube,patch=patch,
+                      loft_z=loft_z,rigid=rigid,torso_w=torso_w)
+  build_kaizen_body(api);build_kaizen_head(api)
+ else:
+  anatomy(identity);face(identity);hair(identity);armor(identity)
  # Adult anime proportions: a tapered ~0.32m head on a 2.3m silhouette, with
  # the jaw closely coupled to the trapezius rather than a visible neck tube.
  for part in PARTS:
@@ -330,6 +344,7 @@ def build(identity):
    for vertex in part.data.vertices:
     vertex.co.x*=.91
     vertex.co.z=(vertex.co.z-1.96)*.92+1.915
+    if identity == 'kaizen':vertex.co.z-=.02
  # Merge by material into ONE skinned surface asset, preserve all vertex groups.
  bpy.ops.object.select_all(action='DESELECT')
  for part in PARTS:part.select_set(True)
@@ -356,6 +371,7 @@ def build(identity):
  normalize_glb_quaternions(OUT/(identity+'.glb'))
  body.data.calc_loop_triangles()
  info={'identity':identity,'vertices':len(body.data.vertices),'triangles':len(body.data.loop_triangles),'bones':len(rig.data.bones),'material_surfaces':len(body.data.materials),'animations':metadata,'source':'Original mesh surfaces and rig authored by Astral Rivals; no third-party assets.'}
+ if identity == 'kaizen':info['art_revision']='phase1_kaizen_v1'
  (OUT/(identity+'_asset.json')).write_text(json.dumps(info,indent=2,default=str))
  print('ASSET COMPLETE',json.dumps(info,default=str))
  # Asset export comes first. Review may take a while on a software CPU renderer.

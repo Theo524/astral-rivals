@@ -11,6 +11,11 @@ The APK and Windows ZIP are stored directly in the repository because the connec
 
 The game builds do not require the Godot editor. Android device execution and physical Windows hardware compatibility remain unverified; see the testing notes below.
 
+**Latest source: Kaizen Phase 1 visual pass.** His model, face, hair, gi, hands,
+boots and toon presentation have been refined while preserving the existing
+combat and skeleton. See [rendered before/after review](docs/KAIZEN_PHASE1.md).
+The downloadable **0.2.0 APK/Windows ZIP predate this source-only update**.
+
 Astral Rivals is a playable Godot 4.6.3 anime arena fighter with three original
 skinned warriors, authored skeletal animations, flight, melee and energy combat,
 and four single-player modes. A standalone **Windows executable has been

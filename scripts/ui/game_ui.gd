@@ -301,6 +301,11 @@ func _refresh_preview(index: int) -> void:
 	preview_model = WarriorVisual.new()
 	preview_stage.add_child(preview_model)
 	preview_model.setup(Roster.roster()[index])
+	# Kaizen's taller swept hair and revised boots stay inside the preview while
+	# his eyes/outfit gain useful pixels. Keep the other fighters' framing intact.
+	var portrait_camera := preview_stage.find_children("*","Camera3D",true,false)[0] as Camera3D
+	portrait_camera.position = Vector3(0.30,1.31,-4.35) if index == 0 else Vector3(0.3,1.25,-4.8)
+	portrait_camera.look_at(Vector3(0,1.17 if index == 0 else 1.15,0))
 	preview_name.text = CHARACTERS[index].name
 	preview_title.text = CHARACTERS[index].title
 	preview_title.add_theme_color_override("font_color",CHARACTERS[index].color)
