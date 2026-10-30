@@ -20,6 +20,10 @@ The downloadable **0.2.0 APK/Windows ZIP predate this source-only update**.
 Blender-source audit, licensed asset research and one isolated base-mesh import.
 It identifies the modeled/rigged asset still needed; the playable art is unchanged.
 
+[Phase 1D private VRM experiment](docs/KAIZEN_PHASE1D.md) adds reproducible
+VRM 1.0 import and three-clip retargeting tools. The user's model and rendered
+captures remain private; the playable game continues using the existing assets.
+
 Astral Rivals is a playable Godot 4.6.3 anime arena fighter with three original
 skinned warriors, authored skeletal animations, flight, melee and energy combat,
 and four single-player modes. A standalone **Windows executable has been

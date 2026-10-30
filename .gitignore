@@ -20,6 +20,13 @@ __pycache__/
 *.blend1
 *.blend2
 
+# Private user character experiments must never enter the public source tree.
+*.vrm
+*.vroid
+private/
+_private/
+vrm_private/
+
 # Local credentials and signing material
 .env
 .env.*
