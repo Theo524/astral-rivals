@@ -224,7 +224,11 @@ class Author:
                 wrist=wrist.lerp(impact,extension)
                 hint=hint.lerp(start+self.left*.09*self.scale-self.up*.18*self.scale+self.front*.22*self.scale,extension)
             direction=self.two_bone(side+'UpperArm',side+'LowerArm',side+'Hand',wrist,hint,core)
-            palm=(-self.front).lerp(-self.up,extension if sign>0 else 0).normalized()
+            # Inward-facing guard fists roll toward palm-down at extension.
+            # A backward->down normal crosses the forearm axis on recoil,
+            # causing a near-90-degree frame flip. Lateral->down stays clear
+            # of that singularity while preserving measured wrist alignment.
+            palm=(-self.left*sign).lerp(-self.up,extension if sign>0 else 0).normalized()
             self.hand(side,direction,palm)
             self.fingers(side,.90+.10*extension)
         self.update()
@@ -249,7 +253,7 @@ def build(armature,human_bones=None):
             if semantic=='hips':pb.keyframe_insert('location',frame=frame,group=name)
     for curve in action.fcurves:
         for key in curve.keyframe_points:key.interpolation='LINEAR'
-    action['authoring']='Original manually designed straight-punch key poses; no source motion retarget'
+    action['authoring']='Original scripted straight-punch design baked to editable keys; no source motion retarget'
     action['contact_seconds']=CONTACT_TIME
     scene.frame_set(1);bpy.context.view_layer.update()
     return {'action':action.name,'fps':FPS,'duration':DURATION,'windup_seconds':.20,

@@ -28,6 +28,11 @@ captures remain private; the playable game continues using the existing assets.
 finger curling, walking-arm correction and one punch/contact inspection. It
 changes only the private viewer and generic tools, not the playable fighter.
 
+[Phase 1F recovery and punch experiment](docs/KAIZEN_PHASE1F.md) preserves the
+private original, tests one controlled body edit and a new Blender punch Action,
+and documents rendered comparisons, the wrist fix and unresolved garment springs.
+Only generic tools and documentation are public; animation polish is unfinished.
+
 Astral Rivals is a playable Godot 4.6.3 anime arena fighter with three original
 skinned warriors, authored skeletal animations, flight, melee and energy combat,
 and four single-player modes. A standalone **Windows executable has been
