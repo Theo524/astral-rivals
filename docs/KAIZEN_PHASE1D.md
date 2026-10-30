@@ -1,5 +1,9 @@
 # Phase 1D — private VRM 1.0 integration experiment
 
+Historical result at `0d6c833`. The current review tools now include
+[Phase 1E pose corrections](KAIZEN_PHASE1E.md); use that document for the latest
+idle, walk, fist and punch inspection behavior.
+
 2026-10-30, starting from `81d9318`. This milestone integrates the user's actual
 VRoid file in a **separate private Godot project**. The public playable Kaizen,
 other fighters, combat, input and game modes remain unchanged. No native

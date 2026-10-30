@@ -24,6 +24,10 @@ It identifies the modeled/rigged asset still needed; the playable art is unchang
 VRM 1.0 import and three-clip retargeting tools. The user's model and rendered
 captures remain private; the playable game continues using the existing assets.
 
+[Phase 1E pose correction](docs/KAIZEN_PHASE1E.md) adds an experimental guard,
+finger curling, walking-arm correction and one punch/contact inspection. It
+changes only the private viewer and generic tools, not the playable fighter.
+
 Astral Rivals is a playable Godot 4.6.3 anime arena fighter with three original
 skinned warriors, authored skeletal animations, flight, melee and energy combat,
 and four single-player modes. A standalone **Windows executable has been

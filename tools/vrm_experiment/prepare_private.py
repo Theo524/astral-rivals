@@ -1,7 +1,7 @@
 """Create an isolated VRM 1.0 experiment; never put user assets in this repo.
 
 python3 tools/vrm_experiment/prepare_private.py --vrm /private/kaizen.vrm \
-    --output /workspace/private/kaizen_phase1d
+    --output /workspace/private/kaizen_phase1e
 Only the pinned MIT importer is downloaded. No user data is uploaded.
 """
 import argparse
@@ -70,7 +70,7 @@ if source != output / 'user_assets/kaizen.vrm':
     shutil.copy2(source, output / 'user_assets/kaizen.vrm')
 (output / 'user_assets/source_manifest.json').write_text(json.dumps(manifest, indent=2))
 shutil.copy2(PROJECT / 'assets/characters/kaizen.glb', output / 'reference/source_kaizen.glb')
-for name in ['import_vrm.gd', 'humanoid_retarget.gd', 'review.gd']:
+for name in ['import_vrm.gd', 'humanoid_retarget.gd', 'martial_pose.gd', 'finger_pose.gd', 'review.gd']:
     file = SCRIPT / name
     shutil.copy2(file, output / 'experiment' / file.name)
 (output / 'project.godot').write_text('''config_version=5
